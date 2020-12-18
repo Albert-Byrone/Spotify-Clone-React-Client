@@ -11,7 +11,14 @@ function App() {
     }
   return (
     <div className="app">
-      <h1>Spotify-clone</h1>
+      {
+        token ? (
+          <h1>Logged In</h1>
+        ): (
+          <Login />
+        )
+      }
+      
     </div>
   );
 }
