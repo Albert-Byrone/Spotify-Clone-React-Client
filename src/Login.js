@@ -5,7 +5,7 @@ import { loginUrl } from './spotify';
 function Login() {
     return (
         <div className="login">
-            <img  src="https://i.ibb.co/3dxhbnY/spotify.png" al="logo" />
+            <img  src="https://i.ibb.co/3dxhbnY/spotify.png" alt="logo" />
             <a href={ loginUrl}>LOGIN WITH SPOTIFY</a>            
         </div>
     )
