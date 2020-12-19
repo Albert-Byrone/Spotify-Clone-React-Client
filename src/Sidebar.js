@@ -6,3 +6,8 @@
             <SidebarOption Icon={ SearchIcon } title="Search"/>
             <SidebarOption Icon={ LibraryMusicIcon } title="Your Library"/>
 
+            <strong className="sidebar__title">PLAYLIST</strong>
+            <hr />
+            { playlists?.items?.map(playlists =>(
+                <SidebarOption title={ playlists.name} /> 
+            ))}
