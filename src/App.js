@@ -16,7 +16,11 @@ function App() {
     console.log(_token);
 
     if(_token){
-      setToken(_token);
+      dispatch({
+        type: 'SET_TOKEN',
+        token: _token
+      });
+      
       spotify.setAccessToken(_token);
     }
   }, [])
