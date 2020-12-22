@@ -38,6 +38,14 @@ function App() {
           playlists: playlists
         })
       });
+
+      spotify.getPlaylist('passtheplaylistid').then(response =>{
+        dispatch({
+          type:'SET_PLAYLISTS',
+          discover_weekly: response
+
+        })
+      })
     };
        // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
