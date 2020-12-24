@@ -39,9 +39,9 @@ function App() {
         })
       });
 
-      spotify.getPlaylist('passtheplaylistid').then(response =>{
+      spotify.getPlaylist('37i9dQZF1DX5nzJu5E8s8B').then(response =>{
         dispatch({
-          type:'SET_PLAYLISTS',
+          type:'SET_DISCOVER_WEEKLY',
           discover_weekly: response
 
         })
