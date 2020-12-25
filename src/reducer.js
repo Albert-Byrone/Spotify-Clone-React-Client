@@ -22,6 +22,11 @@ const reducer = (state, action ) => {
                 ...state,
                 token: action.token
             };
+        case "SET_TRACKS":
+            return {
+                ...state,
+                tracks: action.tracks
+            }
         case "SET_PLAYLISTS":
             return {
                 ...state,
@@ -32,6 +37,17 @@ const reducer = (state, action ) => {
             ...state,
             discover_weekly: action.discover_weekly,
             };
+        case "SET_CURRENT_PLAYLIST":
+            let currentPlaylist = null;
+            state.playlists.items.forEach(playlist => {
+                if(playlist.id === action.id){
+                    currentPlaylist = playlist;
+                }
+            });
+            return {
+                ...state,
+                current_playlist: currentPlaylist
+            }
         default:
             console.log("this s the state",state)
             return state;
